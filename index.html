@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Movie Stats</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/page-icon.png">
+</head>
+<body>
+    <main class="container">
+        <h1>Movie Stats from 2006&ndash;2015</h1>
+        <p>
+            <select id="report-select" class="form-control">
+                <option value="" disabled selected>choose report...</option>
+                <option value="star-wars">Only Star Wars</option>
+                <option value="20th">Re-Released 20th-Century Movies</option>
+                <option value="avg-by-genre">Average Sales by Genre</option>
+                <option value="top-by-tickets">Top 100 by Tickets Sold</option>
+                <option value="avg-sales-tickets-by-rating">Average Sales and Tickets by Rating</option>
+            </select>
+        </p>
+        <h2 class="title"></h2>
+        <div id="report"></div>
+    </main>
+    <!--numeral.js: a number formatting library (http://numeraljs.com/)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
+    <!--moment.js: a date parsing and formatting library (http://momentjs.com/)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
+    <!--movie stats data file: defines MOVIES global variable-->
+    <script src="data/movies-2006-2015.js"></script>
+    <!--our application script-->
+    <script src="js/app.js"></script>
+</body>
+</html>
